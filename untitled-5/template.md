@@ -17,33 +17,33 @@ html/template包实现了数据驱动的模板，用于生成可对抗代码注�
 HTML文件代码如下：
 
 ```text
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hellotitle>
-head>
+    <title>Hello</title>
+</head>
 <body>
-    <p>Hello {{.}}p>
-body>
-html>
+    <p>Hello {{.}}</p>
+</body>
+</html>
 ```
 
 我们的HTTP server端代码如下：
 
 ```text
-
+// main.go
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
-    
+    // 解析指定文件生成模板对象
     tmpl, err := template.ParseFiles("./hello.html")
     if err != nil {
         fmt.Println("create template failed, err:", err)
         return
     }
-    
+    // 利用给定数据渲染模板，并将结果写入w
     tmpl.Execute(w, "5lmh.com")
 }
 func main() {
