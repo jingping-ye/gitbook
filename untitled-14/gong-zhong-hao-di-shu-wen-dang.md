@@ -1,0 +1,27 @@
+# 公众号-地鼠文档
+
+开发前必读：[微信公众官方文档](https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html)
+
+## 获取微信公众号操作对象 <a id="ut3wo"></a>
+
+```text
+wc := wechat.NewWechat()
+//设置全局cache，也可以单独为每个操作实例设置
+redisOpts := &cache.RedisOpts{
+    Host:       "127.0.0.1:6379",
+}
+redisCache := cache.NewRedis(redisOpts)
+wc.SetCache(redisCache)
+cfg := &offConfig.Config{
+    AppID:     "xxx",
+    AppSecret: "xxx",
+    Token:     "xxx",
+    //EncodingAESKey: "xxxx",
+    //Cache: redisCache, //也可以单独设置
+}
+officialAccount := wc.GetOfficialAccount(cfg)
+//TODO 使用 `officialAccount` 操作公众号相关接口
+```
+
+文档更新时间: 2020-08-19 10:29   作者：kuteng
+
