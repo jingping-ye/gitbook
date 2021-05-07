@@ -277,6 +277,8 @@
   * [Go%E9%AB%98%E7%BA%A7](untitled-7/go-e9-ab-98-e7-ba-a7-12.md)
   * [404 Not Found](untitled-7/404-not-found-12.md)
 * [插件库](untitled-9/README.md)
+  * [markdown解析库](untitled-9/markdown-jie-xi-ku.md)
+  * [选项设计模式](untitled-9/xuan-xiang-she-ji-mo-shi.md)
   * [PDF转JPG](untitled-9/pdf-zhuan-jpg.md)
   * [Sessions](untitled-9/sessions.md)
   * [压缩解压文件](untitled-9/ya-suo-jie-ya-wen-jian.md)
