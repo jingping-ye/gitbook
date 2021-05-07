@@ -65,7 +65,7 @@ func main() {
 当我们传入一个结构体对象时，我们可以根据`.`来访问结构体的对应字段。例如：
 
 ```text
-
+// main.go
 
 type UserInfo struct {
     Name   string
@@ -74,13 +74,13 @@ type UserInfo struct {
 }
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
-    
+    // 解析指定文件生成模板对象
     tmpl, err := template.ParseFiles("./hello.html")
     if err != nil {
         fmt.Println("create template failed, err:", err)
         return
     }
-    
+    // 利用给定数据渲染模板，并将结果写入w
     user := UserInfo{
         Name:   "枯藤",
         Gender: "男",
