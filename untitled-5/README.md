@@ -16,7 +16,7 @@
 
 [Strconv](strconv.md)
 
-[Template]()
+[Template](template.md)
 
 [Http](http.md)
 
