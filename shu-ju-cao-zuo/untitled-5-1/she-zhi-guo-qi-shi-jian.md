@@ -1,0 +1,47 @@
+# 设置过期时间
+
+* [**1.** 设置过期时间](she-zhi-guo-qi-shi-jian.md#设置过期时间)
+
+## 1. 设置过期时间 <a id="&#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65F6;&#x95F4;"></a>
+
+```text
+package main
+
+import (
+    "fmt"
+    "github.com/garyburd/redigo/redis"
+)
+
+func main() {
+    c, err := redis.Dial("tcp", "localhost:6379")
+    if err != nil {
+        fmt.Println("conn redis failed,", err)
+        return
+    }
+
+    defer c.Close()
+    _, err = c.Do("expire", "abc", 10)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+}
+```
+
+命令行运行：
+
+```text
+    go run main.go
+```
+
+Redis命令行窗口：
+
+```text
+    127.0.0.1:6379> get abc
+    "100"
+
+    # 10秒后过期
+    127.0.0.1:6379> get abc
+    (nil)
+```
+

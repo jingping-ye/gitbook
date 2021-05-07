@@ -1,0 +1,22 @@
+# 循环控制Goto、Break、Continue
+
+* [**1.** 循环控制Goto、Break、Continue](xun-huan-kong-zhi-gotobreakcontinue.md#循环控制goto、break、continue)
+  * * [**1.1.1.** Goto、Break、Continue](xun-huan-kong-zhi-gotobreakcontinue.md#goto、break、continue)
+
+## 1. 循环控制Goto、Break、Continue <a id="&#x5FAA;&#x73AF;&#x63A7;&#x5236;goto&#x3001;break&#x3001;continue"></a>
+
+循环控制语句
+
+循环控制语句可以控制循环体内语句的执行过程。
+
+GO 语言支持以下几种循环控制语句：
+
+### 1.1.1. Goto、Break、Continue <a id="goto&#x3001;break&#x3001;continue"></a>
+
+```text
+     1.三个语句都可以配合标签(label)使用
+    2.标签名区分大小写，定以后若不使用会造成编译错误
+    3.continue、break配合标签(label)可用于多层循环跳出
+    4.goto是调整执行位置，与continue、break配合标签(label)的结果并不相同
+```
+
