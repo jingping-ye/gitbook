@@ -26,7 +26,7 @@ HTML文件代码如下：
     <title>Hellotitle>
 head>
 <body>
-    <p>Hello {{.}}</p>
+    <p>Hello {{.}}p>
 body>
 html>
 ```
