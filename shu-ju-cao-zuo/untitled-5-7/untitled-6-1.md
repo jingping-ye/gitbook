@@ -1,4 +1,4 @@
-# Gorm用法介绍 · Go语言中文文档
+# Gorm用法介绍
 
 ## 1. Gorm用法介绍 <a id="gorm&#x7528;&#x6CD5;&#x4ECB;&#x7ECD;"></a>
 
